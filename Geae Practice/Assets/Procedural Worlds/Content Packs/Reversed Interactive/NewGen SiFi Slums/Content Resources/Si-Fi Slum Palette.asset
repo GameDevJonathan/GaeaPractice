@@ -1,0 +1,529 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c477de684ee10c4082f9fddf19a75ce, type: 3}
+  m_Name: Si-Fi Slum Palette
+  m_EditorClassIdentifier: 
+  m_paletteEntryIDCount: -2147483413
+  m_paletteEntries:
+  - m_name: Block Plane
+    m_id: -2147483515
+    m_guid: cb66018e9830db44f849ab96c481ca0d
+    m_object: {fileID: 1626654085696153912, guid: cb66018e9830db44f849ab96c481ca0d,
+      type: 3}
+  - m_name: Spawner - Scafholding Spawner
+    m_id: -2147483514
+    m_guid: 92851f869c6c24740ade1227e1452d39
+    m_object: {fileID: 7554044645030935363, guid: 92851f869c6c24740ade1227e1452d39,
+      type: 3}
+  - m_name: Spawner - Garbage Can Spawner
+    m_id: -2147483513
+    m_guid: d91a49d92ef524745943fb7c6c38cbc0
+    m_object: {fileID: 8586280354486427581, guid: d91a49d92ef524745943fb7c6c38cbc0,
+      type: 3}
+  - m_name: Spawner - Market Stall Spawner
+    m_id: -2147483512
+    m_guid: 354cf206a81747148bdce1571f3299aa
+    m_object: {fileID: 1914816187581261102, guid: 354cf206a81747148bdce1571f3299aa,
+      type: 3}
+  - m_name: Spawner - Small Pallet Spawner
+    m_id: -2147483511
+    m_guid: 972f361d2a618f5408d920e163c64325
+    m_object: {fileID: 1272250293734735919, guid: 972f361d2a618f5408d920e163c64325,
+      type: 3}
+  - m_name: Spawner - Dumpster Spawner
+    m_id: -2147483510
+    m_guid: 22a33d4c4f4d69b4184f5149cded8840
+    m_object: {fileID: 6958078829418920730, guid: 22a33d4c4f4d69b4184f5149cded8840,
+      type: 3}
+  - m_name: Spawner - Large Pallet Spawner
+    m_id: -2147483509
+    m_guid: c8eae6b3c39c5b244a65eb33f5855805
+    m_object: {fileID: 150916217668659381, guid: c8eae6b3c39c5b244a65eb33f5855805,
+      type: 3}
+  - m_name: Spawner - Trashbag Spawner
+    m_id: -2147483508
+    m_guid: 560d3cdb5cdc1cc4b9be74026d9fc17e
+    m_object: {fileID: 7284231118911961570, guid: 560d3cdb5cdc1cc4b9be74026d9fc17e,
+      type: 3}
+  - m_name: Spawner - Trash Bunch
+    m_id: -2147483507
+    m_guid: 7dc91ce525711174d908ea48171bcc2b
+    m_object: {fileID: 1412658048947544004, guid: 7dc91ce525711174d908ea48171bcc2b,
+      type: 3}
+  - m_name: Spawner - 2x2 Building Spawner
+    m_id: -2147483506
+    m_guid: dcb4af00bdd1a9c4895e7e57b9747ea3
+    m_object: {fileID: 4389829037712393076, guid: dcb4af00bdd1a9c4895e7e57b9747ea3,
+      type: 3}
+  - m_name: Spawner - L Building Spawner
+    m_id: -2147483505
+    m_guid: b763830170e58644f8b97b1905fc6232
+    m_object: {fileID: 6845938345817532614, guid: b763830170e58644f8b97b1905fc6232,
+      type: 3}
+  - m_name: Spawner - 1x1 Building Spawner
+    m_id: -2147483504
+    m_guid: 4cba1ad897cdf5748983ccaafc1a51fe
+    m_object: {fileID: 410472822843792628, guid: 4cba1ad897cdf5748983ccaafc1a51fe,
+      type: 3}
+  - m_name: Spawner - 1x1 Wide Ally Lights
+    m_id: -2147483503
+    m_guid: e9535281fb1a00a489f8457002f35998
+    m_object: {fileID: 5156113352382945703, guid: e9535281fb1a00a489f8457002f35998,
+      type: 3}
+  - m_name: Spawner - 2x1 Building Spawner
+    m_id: -2147483502
+    m_guid: a9b4b1ed02a8b024383629739b631c9e
+    m_object: {fileID: 5033221816261455433, guid: a9b4b1ed02a8b024383629739b631c9e,
+      type: 3}
+  - m_name: Spawner - Pottery Spawner
+    m_id: -2147483501
+    m_guid: 2e7de6d61d6ba744595d101a9ee0ebb6
+    m_object: {fileID: 3388242361083452557, guid: 2e7de6d61d6ba744595d101a9ee0ebb6,
+      type: 3}
+  - m_name: Spawner - Power Post
+    m_id: -2147483500
+    m_guid: f461588320915244b93629a820092ca1
+    m_object: {fileID: 6369539795034735766, guid: f461588320915244b93629a820092ca1,
+      type: 3}
+  - m_name: Path90
+    m_id: -2147483499
+    m_guid: 3155328a0536c5a448f5f9c601be2765
+    m_object: {fileID: 4119646779674695310, guid: 3155328a0536c5a448f5f9c601be2765,
+      type: 3}
+  - m_name: Spawner - Sidewalk Section
+    m_id: -2147483498
+    m_guid: 9c5d17002e19e914cb306def3c64510a
+    m_object: {fileID: 526108740484167723, guid: 9c5d17002e19e914cb306def3c64510a,
+      type: 3}
+  - m_name: Top Section 1
+    m_id: -2147483497
+    m_guid: 1015ed0faa0cc8c4f89dd165475d831f
+    m_object: {fileID: 3288123896476543687, guid: 1015ed0faa0cc8c4f89dd165475d831f,
+      type: 3}
+  - m_name: Spawner - Canopy Spawner
+    m_id: -2147483496
+    m_guid: a60262be8f46f84499521650311eb9d9
+    m_object: {fileID: 1604046550827689365, guid: a60262be8f46f84499521650311eb9d9,
+      type: 3}
+  - m_name: Top Section 2
+    m_id: -2147483495
+    m_guid: 579bdbcdabd173f45b57c6ea8971d95d
+    m_object: {fileID: 8299022089334365913, guid: 579bdbcdabd173f45b57c6ea8971d95d,
+      type: 3}
+  - m_name: Spawner - Clothing Spawner
+    m_id: -2147483494
+    m_guid: a630cb0a74c576b498de8d21ec261761
+    m_object: {fileID: 2359914334226072500, guid: a630cb0a74c576b498de8d21ec261761,
+      type: 3}
+  - m_name: Top Section 3
+    m_id: -2147483493
+    m_guid: 8d810f9ac7f55a5419695f44dd935632
+    m_object: {fileID: 2781227654217174246, guid: 8d810f9ac7f55a5419695f44dd935632,
+      type: 3}
+  - m_name: Bottom Section 1
+    m_id: -2147483492
+    m_guid: b8918c90038e70247bbdefae3ead7ed9
+    m_object: {fileID: 4300576967337469982, guid: b8918c90038e70247bbdefae3ead7ed9,
+      type: 3}
+  - m_name: Spawner - SignElectric7
+    m_id: -2147483491
+    m_guid: 1a2a2aabda65d324186e3b221947b7ff
+    m_object: {fileID: 2474015709464158451, guid: 1a2a2aabda65d324186e3b221947b7ff,
+      type: 3}
+  - m_name: Spawner - SignElectric5
+    m_id: -2147483490
+    m_guid: 17f4f96b82e845a4a9113dc17f77e93f
+    m_object: {fileID: 7293750103140830944, guid: 17f4f96b82e845a4a9113dc17f77e93f,
+      type: 3}
+  - m_name: Spawner - SignElectric8
+    m_id: -2147483489
+    m_guid: a926639a2c4cc5749bc0ed44610735d6
+    m_object: {fileID: 4848529325350879275, guid: a926639a2c4cc5749bc0ed44610735d6,
+      type: 3}
+  - m_name: Spawner - SignElectric10
+    m_id: -2147483488
+    m_guid: f17556307f5999b4bb8e35c5f5840db1
+    m_object: {fileID: 717115281264812215, guid: f17556307f5999b4bb8e35c5f5840db1,
+      type: 3}
+  - m_name: Spawner - SignElectric4
+    m_id: -2147483487
+    m_guid: 285ca080b95166d47848223cbeefc610
+    m_object: {fileID: 8595431059739440534, guid: 285ca080b95166d47848223cbeefc610,
+      type: 3}
+  - m_name: Spawner - SignElectric1
+    m_id: -2147483486
+    m_guid: 29560a71fa827a341874b937e38ce1b1
+    m_object: {fileID: 2190277218856897617, guid: 29560a71fa827a341874b937e38ce1b1,
+      type: 3}
+  - m_name: Bottom Section 2
+    m_id: -2147483485
+    m_guid: 43e5967fdf917b041a762ea03debbcec
+    m_object: {fileID: 5177147642266412765, guid: 43e5967fdf917b041a762ea03debbcec,
+      type: 3}
+  - m_name: Bottom Section 3
+    m_id: -2147483484
+    m_guid: 193a346b6e75cc34ab5ca4e7b02e81cc
+    m_object: {fileID: 127108763347140339, guid: 193a346b6e75cc34ab5ca4e7b02e81cc,
+      type: 3}
+  - m_name: Bottom Section 4
+    m_id: -2147483483
+    m_guid: 341892eeb6136ca45901f6760f41ccea
+    m_object: {fileID: 2951306447765314817, guid: 341892eeb6136ca45901f6760f41ccea,
+      type: 3}
+  - m_name: CanopyFrame
+    m_id: -2147483482
+    m_guid: 4762f35fd9a1746448a140ef6b107f54
+    m_object: {fileID: 8552060277672497725, guid: 4762f35fd9a1746448a140ef6b107f54,
+      type: 3}
+  - m_name: CanopyMain
+    m_id: -2147483481
+    m_guid: 95b13f4a0a275124eab2a8d045a41303
+    m_object: {fileID: 2698337375878022486, guid: 95b13f4a0a275124eab2a8d045a41303,
+      type: 3}
+  - m_name: CanopyMainGreen
+    m_id: -2147483480
+    m_guid: d6623b15c31840942b995f9f17323880
+    m_object: {fileID: 518926078465376953, guid: d6623b15c31840942b995f9f17323880,
+      type: 3}
+  - m_name: Clothing5
+    m_id: -2147483479
+    m_guid: 60c7ed506fd9d384aac1ac861ab13b37
+    m_object: {fileID: 2349179914279711591, guid: 60c7ed506fd9d384aac1ac861ab13b37,
+      type: 3}
+  - m_name: Clothing7
+    m_id: -2147483478
+    m_guid: 3d747be9e4191c8468d9f731b7d884ee
+    m_object: {fileID: 7543443162723472302, guid: 3d747be9e4191c8468d9f731b7d884ee,
+      type: 3}
+  - m_name: ClothingBatch
+    m_id: -2147483477
+    m_guid: 966977000c2ebae468933b8d21707e22
+    m_object: {fileID: 1816133197593730164, guid: 966977000c2ebae468933b8d21707e22,
+      type: 3}
+  - m_name: ClothingBatch1 (4)
+    m_id: -2147483476
+    m_guid: 2c0a1e27cbb5e1448a61c2fd124da0ac
+    m_object: {fileID: 3849008988021938781, guid: 2c0a1e27cbb5e1448a61c2fd124da0ac,
+      type: 3}
+  - m_name: ClothingBatch1
+    m_id: -2147483475
+    m_guid: 6a0b30f8b0db9364ab2decc8f90b350e
+    m_object: {fileID: 5593694153182359553, guid: 6a0b30f8b0db9364ab2decc8f90b350e,
+      type: 3}
+  - m_name: ClothingBatch2 (1)
+    m_id: -2147483474
+    m_guid: 82810e3d614d85a4a8d055afc0876e04
+    m_object: {fileID: 6667672657440590010, guid: 82810e3d614d85a4a8d055afc0876e04,
+      type: 3}
+  - m_name: ClothingBatch2
+    m_id: -2147483473
+    m_guid: e51929da03806374b93143666f6f43e0
+    m_object: {fileID: 4991054005280439613, guid: e51929da03806374b93143666f6f43e0,
+      type: 3}
+  - m_name: Lights
+    m_id: -2147483472
+    m_guid: 979fb94d4a172c745aa88e25194af0c0
+    m_object: {fileID: 8966562134423084659, guid: 979fb94d4a172c745aa88e25194af0c0,
+      type: 3}
+  - m_name: Fence
+    m_id: -2147483471
+    m_guid: 98ad7623c1fee3d4a8dc4ac2c3186231
+    m_object: {fileID: 6057102551660002190, guid: 98ad7623c1fee3d4a8dc4ac2c3186231,
+      type: 3}
+  - m_name: TrashDecal1
+    m_id: -2147483470
+    m_guid: c77ef59086a334c4282adbf16e7a113e
+    m_object: {fileID: 3707209398865068992, guid: c77ef59086a334c4282adbf16e7a113e,
+      type: 3}
+  - m_name: Oil
+    m_id: -2147483469
+    m_guid: 3289eac5935a5864cb816e20d5d59914
+    m_object: {fileID: 4861549648821792987, guid: 3289eac5935a5864cb816e20d5d59914,
+      type: 3}
+  - m_name: Path
+    m_id: -2147483468
+    m_guid: 8467627f1e0e52e4a8a566d48ca61031
+    m_object: {fileID: 6561872353077654849, guid: 8467627f1e0e52e4a8a566d48ca61031,
+      type: 3}
+  - m_name: PathCrossing
+    m_id: -2147483467
+    m_guid: 7caf1e84b42b35f468f6fc045cabb480
+    m_object: {fileID: 2468515746475016008, guid: 7caf1e84b42b35f468f6fc045cabb480,
+      type: 3}
+  - m_name: Spawner - Bottom Section Spawner
+    m_id: -2147483466
+    m_guid: d6de4d065fcb5604dbd04d7700533201
+    m_object: {fileID: 2040848382213487361, guid: d6de4d065fcb5604dbd04d7700533201,
+      type: 3}
+  - m_name: Spawner - Top Section Spawner(Excludes #4)
+    m_id: -2147483465
+    m_guid: e6003d06e77d6854196decbd1a4f8f76
+    m_object: {fileID: 2522201943414283119, guid: e6003d06e77d6854196decbd1a4f8f76,
+      type: 3}
+  - m_name: 1x1 Roof
+    m_id: -2147483464
+    m_guid: b3c92dbcca3ca404ab1d730fa24e55a1
+    m_object: {fileID: 1114876884291223692, guid: b3c92dbcca3ca404ab1d730fa24e55a1,
+      type: 3}
+  - m_name: 2x1 Roof
+    m_id: -2147483463
+    m_guid: 5f70648a5e12f45409b8a27a1359346a
+    m_object: {fileID: 6432855483129237356, guid: 5f70648a5e12f45409b8a27a1359346a,
+      type: 3}
+  - m_name: Spawner - Upper Floor
+    m_id: -2147483462
+    m_guid: a4e32a04db6128c44b95eeb8202e8469
+    m_object: {fileID: 5982143635677653724, guid: a4e32a04db6128c44b95eeb8202e8469,
+      type: 3}
+  - m_name: L Roof
+    m_id: -2147483461
+    m_guid: 6fac27924a23cee478952ac523e13cad
+    m_object: {fileID: 4475631909193730355, guid: 6fac27924a23cee478952ac523e13cad,
+      type: 3}
+  - m_name: Sparks
+    m_id: -2147483460
+    m_guid: a031e336480967349bb17a33e0fa5091
+    m_object: {fileID: 4606355036644945269, guid: a031e336480967349bb17a33e0fa5091,
+      type: 3}
+  - m_name: PostPowerTall
+    m_id: -2147483459
+    m_guid: 2061d92d328436d4598bd0e9c19906ad
+    m_object: {fileID: 5175857313387201280, guid: 2061d92d328436d4598bd0e9c19906ad,
+      type: 3}
+  - m_name: PostPowerLow
+    m_id: -2147483458
+    m_guid: 9d204dda9a47aac43b2a53f5579e50da
+    m_object: {fileID: 7528985744506408876, guid: 9d204dda9a47aac43b2a53f5579e50da,
+      type: 3}
+  - m_name: GroundWire1
+    m_id: -2147483457
+    m_guid: e4ec5b6437298c940bf74a84573e61ef
+    m_object: {fileID: 2359616151277635405, guid: e4ec5b6437298c940bf74a84573e61ef,
+      type: 3}
+  - m_name: GroundWire2
+    m_id: -2147483456
+    m_guid: f32b8645e43063a42afcb4553b623e27
+    m_object: {fileID: 6446653107387763485, guid: f32b8645e43063a42afcb4553b623e27,
+      type: 3}
+  - m_name: GroundWire3
+    m_id: -2147483455
+    m_guid: 32e258aca172a2b4c9eb8fdf02e16aa4
+    m_object: {fileID: 5875114618904098651, guid: 32e258aca172a2b4c9eb8fdf02e16aa4,
+      type: 3}
+  - m_name: GroundWires1
+    m_id: -2147483454
+    m_guid: bc2ffc0559b87794299dce6008f57c50
+    m_object: {fileID: 1948989332523706344, guid: bc2ffc0559b87794299dce6008f57c50,
+      type: 3}
+  - m_name: GroundWires2
+    m_id: -2147483453
+    m_guid: 39570e47e4f07ba4ca4eb9a0ef9b2efd
+    m_object: {fileID: 6350919619440188712, guid: 39570e47e4f07ba4ca4eb9a0ef9b2efd,
+      type: 3}
+  - m_name: Scaffholding 2x1 w_Ladder
+    m_id: -2147483452
+    m_guid: d18e6c536866dd94bae15aa2df3a58b7
+    m_object: {fileID: 1350956217256788404, guid: d18e6c536866dd94bae15aa2df3a58b7,
+      type: 3}
+  - m_name: Scaffholding 1x1
+    m_id: -2147483451
+    m_guid: 46c707e4d6e54704e941e3f988e2284a
+    m_object: {fileID: 8854610339894367328, guid: 46c707e4d6e54704e941e3f988e2284a,
+      type: 3}
+  - m_name: Scaffholding 2x1
+    m_id: -2147483450
+    m_guid: c938d1692d9e98d41b42a7cd93c15580
+    m_object: {fileID: 5267967021208185402, guid: c938d1692d9e98d41b42a7cd93c15580,
+      type: 3}
+  - m_name: Barrel3
+    m_id: -2147483449
+    m_guid: 01a25f283c277e3468245eb145c8fd03
+    m_object: {fileID: 3065106207341690498, guid: 01a25f283c277e3468245eb145c8fd03,
+      type: 3}
+  - m_name: Barrel2
+    m_id: -2147483448
+    m_guid: fbbb5cd7065918a45bd74e862c1a6877
+    m_object: {fileID: 8145754631092353978, guid: fbbb5cd7065918a45bd74e862c1a6877,
+      type: 3}
+  - m_name: Barrel1
+    m_id: -2147483447
+    m_guid: fd96394fead2b2444b2b168f5c5b00c5
+    m_object: {fileID: 3022569099416770398, guid: fd96394fead2b2444b2b168f5c5b00c5,
+      type: 3}
+  - m_name: Bottle
+    m_id: -2147483446
+    m_guid: b05cc9109cc03054f9caa6d89940cfd4
+    m_object: {fileID: 3902134219877173810, guid: b05cc9109cc03054f9caa6d89940cfd4,
+      type: 3}
+  - m_name: Bottle2
+    m_id: -2147483445
+    m_guid: 1f1667970a436a740a1bf88129e268f5
+    m_object: {fileID: 2874117737901946061, guid: 1f1667970a436a740a1bf88129e268f5,
+      type: 3}
+  - m_name: Can1
+    m_id: -2147483444
+    m_guid: 9b71e24e8f2db7d4c907545990fad2d0
+    m_object: {fileID: 9099057927911866038, guid: 9b71e24e8f2db7d4c907545990fad2d0,
+      type: 3}
+  - m_name: Can2
+    m_id: -2147483443
+    m_guid: 97c3e69f269872642a1fe65b8866f48a
+    m_object: {fileID: 8220948324691241437, guid: 97c3e69f269872642a1fe65b8866f48a,
+      type: 3}
+  - m_name: TrashBag1
+    m_id: -2147483442
+    m_guid: cee0e23ebaa68564eabcb047090a7973
+    m_object: {fileID: 7285518304331893596, guid: cee0e23ebaa68564eabcb047090a7973,
+      type: 3}
+  - m_name: TrashBag2
+    m_id: -2147483441
+    m_guid: d699a82ef2c43d342bfd83b572c45bd1
+    m_object: {fileID: 7101461955889308395, guid: d699a82ef2c43d342bfd83b572c45bd1,
+      type: 3}
+  - m_name: TrashBag3
+    m_id: -2147483440
+    m_guid: 64cf16cc802e9534ca605f0eeadbefea
+    m_object: {fileID: 3118067510961301395, guid: 64cf16cc802e9534ca605f0eeadbefea,
+      type: 3}
+  - m_name: Pallet6
+    m_id: -2147483439
+    m_guid: 10dfcc2da75791e41b1d8671f270a942
+    m_object: {fileID: 2035087626396306100, guid: 10dfcc2da75791e41b1d8671f270a942,
+      type: 3}
+  - m_name: Pallet7
+    m_id: -2147483438
+    m_guid: f8f4b7f541cf7c841aa39a87fc78762b
+    m_object: {fileID: 8337013776761895605, guid: f8f4b7f541cf7c841aa39a87fc78762b,
+      type: 3}
+  - m_name: Dumpster
+    m_id: -2147483437
+    m_guid: f34d6873c147ae941b088263cc8fde69
+    m_object: {fileID: 446527121874242586, guid: f34d6873c147ae941b088263cc8fde69,
+      type: 3}
+  - m_name: TrashCan
+    m_id: -2147483436
+    m_guid: b8ea06e81e78cee43bf29d030bcafa5b
+    m_object: {fileID: 2140951996705977117, guid: b8ea06e81e78cee43bf29d030bcafa5b,
+      type: 3}
+  - m_name: WheelBinSlim
+    m_id: -2147483435
+    m_guid: 86ccbe7d17d77704da83da5428e2ca74
+    m_object: {fileID: 3289966368038024721, guid: 86ccbe7d17d77704da83da5428e2ca74,
+      type: 3}
+  - m_name: WheelBinWide
+    m_id: -2147483434
+    m_guid: c43e967eedc089e40bff90693fa4ef9a
+    m_object: {fileID: 1115270731055237247, guid: c43e967eedc089e40bff90693fa4ef9a,
+      type: 3}
+  - m_name: Pallet1
+    m_id: -2147483433
+    m_guid: 5914c6583faeef94a898f6bcfa67d7e5
+    m_object: {fileID: 3427225365895693596, guid: 5914c6583faeef94a898f6bcfa67d7e5,
+      type: 3}
+  - m_name: Pallet2
+    m_id: -2147483432
+    m_guid: 43be20de5e7c56a4d99863f21b79e3ee
+    m_object: {fileID: 8113542063924123124, guid: 43be20de5e7c56a4d99863f21b79e3ee,
+      type: 3}
+  - m_name: Pallet3
+    m_id: -2147483431
+    m_guid: 44b29cc9272cc1d44a0a77438c2547bd
+    m_object: {fileID: 8115035277362605133, guid: 44b29cc9272cc1d44a0a77438c2547bd,
+      type: 3}
+  - m_name: Pallet4
+    m_id: -2147483430
+    m_guid: 6dce4df1a9059ad48bd9bac06eeb06a3
+    m_object: {fileID: 8951683749094259524, guid: 6dce4df1a9059ad48bd9bac06eeb06a3,
+      type: 3}
+  - m_name: Pallet5
+    m_id: -2147483429
+    m_guid: d049c4d9c6c10d54f8b86bfeab05d1ec
+    m_object: {fileID: 2055829696547987166, guid: d049c4d9c6c10d54f8b86bfeab05d1ec,
+      type: 3}
+  - m_name: Pottery1
+    m_id: -2147483428
+    m_guid: e21dae65b95d7b445a5580c58b5c9c40
+    m_object: {fileID: 8369323502586010683, guid: e21dae65b95d7b445a5580c58b5c9c40,
+      type: 3}
+  - m_name: Pottery2
+    m_id: -2147483427
+    m_guid: ccefb52025956984a8fbcde1cdd3e2ba
+    m_object: {fileID: 265254628839066982, guid: ccefb52025956984a8fbcde1cdd3e2ba,
+      type: 3}
+  - m_name: Pottery3
+    m_id: -2147483426
+    m_guid: 453ede7f87a2d7740a89a3abdf31bf50
+    m_object: {fileID: 6820206725877893169, guid: 453ede7f87a2d7740a89a3abdf31bf50,
+      type: 3}
+  - m_name: Pottery4
+    m_id: -2147483425
+    m_guid: 096eac183e9823d45914655216df3a16
+    m_object: {fileID: 8754974803507174383, guid: 096eac183e9823d45914655216df3a16,
+      type: 3}
+  - m_name: Pottery5
+    m_id: -2147483424
+    m_guid: 337e7fd452bb8aa479b92e209c81afec
+    m_object: {fileID: 8464312126454534118, guid: 337e7fd452bb8aa479b92e209c81afec,
+      type: 3}
+  - m_name: Pottery6
+    m_id: -2147483423
+    m_guid: c885db3141537c747a2d756293a81c70
+    m_object: {fileID: 3180913516971377353, guid: c885db3141537c747a2d756293a81c70,
+      type: 3}
+  - m_name: Market
+    m_id: -2147483422
+    m_guid: 164a389a6203a2143806c720931dc16a
+    m_object: {fileID: 1868367539165595396, guid: 164a389a6203a2143806c720931dc16a,
+      type: 3}
+  - m_name: SignElectric1
+    m_id: -2147483421
+    m_guid: 2d57f3b0911fa6746b4e0fafa824fa66
+    m_object: {fileID: 9122244910546327275, guid: 2d57f3b0911fa6746b4e0fafa824fa66,
+      type: 3}
+  - m_name: SignElectric4
+    m_id: -2147483420
+    m_guid: 7514f2c94c12b854f8cf9fa2b645101a
+    m_object: {fileID: 102271670069162766, guid: 7514f2c94c12b854f8cf9fa2b645101a,
+      type: 3}
+  - m_name: SignElectric5
+    m_id: -2147483419
+    m_guid: 652a1d96e49687f40b797dd594f85c2f
+    m_object: {fileID: 1919690637780814808, guid: 652a1d96e49687f40b797dd594f85c2f,
+      type: 3}
+  - m_name: SignElectric7
+    m_id: -2147483418
+    m_guid: 39188defe46926342ba81c76750fffe4
+    m_object: {fileID: 6493540726508522420, guid: 39188defe46926342ba81c76750fffe4,
+      type: 3}
+  - m_name: SignElectric8
+    m_id: -2147483417
+    m_guid: ebd8f3cba09ab344395b424d2e611f80
+    m_object: {fileID: 2400809591698544087, guid: ebd8f3cba09ab344395b424d2e611f80,
+      type: 3}
+  - m_name: SignElectric10
+    m_id: -2147483416
+    m_guid: b5ac60861767f9f49bb92c77f9f6a270
+    m_object: {fileID: 6200097025086304798, guid: b5ac60861767f9f49bb92c77f9f6a270,
+      type: 3}
+  - m_name: Building Flatten Mask
+    m_id: -2147483415
+    m_guid: d5dc8c52b9fd319458740d466f00171b
+    m_object: {fileID: 2800000, guid: d5dc8c52b9fd319458740d466f00171b, type: 3}
+  - m_name: Block Plane Parent
+    m_id: -2147483414
+    m_guid: 23dca4e6ad6f58a4a8883d50cf8ea121
+    m_object: {fileID: 4801554106891570778, guid: 23dca4e6ad6f58a4a8883d50cf8ea121,
+      type: 3}
+  - m_name: Building Flatten Mask
+    m_id: -2147483413
+    m_guid: 45958f3e6f0b20d4bafc8a43ead2c8c0
+    m_object: {fileID: 2800000, guid: 45958f3e6f0b20d4bafc8a43ead2c8c0, type: 3}
