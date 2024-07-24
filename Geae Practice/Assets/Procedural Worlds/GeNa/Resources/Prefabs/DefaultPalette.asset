@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c477de684ee10c4082f9fddf19a75ce, type: 3}
   m_Name: DefaultPalette
   m_EditorClassIdentifier: 
-  m_paletteEntryIDCount: -2147483468
+  m_paletteEntryIDCount: -2147483465
   m_paletteEntries:
   - m_name: Pref_Barn1_A
     m_id: -2147483647
@@ -803,3 +803,16 @@ MonoBehaviour:
     m_id: -2147483468
     m_guid: e481f95326f941a44a432c13d5a5eb70
     m_object: {fileID: 100006, guid: e481f95326f941a44a432c13d5a5eb70, type: 3}
+  - m_name: C_Truck
+    m_id: -2147483467
+    m_guid: 93c96f90822ba9940a5f2726ef699056
+    m_object: {fileID: 493894061774809390, guid: 93c96f90822ba9940a5f2726ef699056,
+      type: 3}
+  - m_name: Truck_02
+    m_id: -2147483466
+    m_guid: af437eecb51a1f847bfb765e8cdaecf9
+    m_object: {fileID: 1341889616728956, guid: af437eecb51a1f847bfb765e8cdaecf9, type: 3}
+  - m_name: Truck_01
+    m_id: -2147483465
+    m_guid: 6e2aa137ededd6a4ca7eee02ab8246ff
+    m_object: {fileID: 1341889616728956, guid: 6e2aa137ededd6a4ca7eee02ab8246ff, type: 3}
