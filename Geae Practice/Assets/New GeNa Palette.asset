@@ -13,12 +13,4 @@ MonoBehaviour:
   m_Name: New GeNa Palette
   m_EditorClassIdentifier: 
   m_paletteEntryIDCount: -2147483648
-  m_paletteEntries:
-  - m_name: 
-    m_id: 0
-    m_guid: 
-    m_object: {fileID: 1788332881381280, guid: 222494f3affe7bc40bd33d26f94c4cb8, type: 3}
-  - m_name: 
-    m_id: 0
-    m_guid: 
-    m_object: {fileID: 1788332881381280, guid: 79c71d5ab6a3adf40a40f3d701414dee, type: 3}
+  m_paletteEntries: []

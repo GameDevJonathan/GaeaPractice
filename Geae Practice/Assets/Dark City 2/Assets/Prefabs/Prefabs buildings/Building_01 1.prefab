@@ -48785,9 +48785,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4781885032934320}
   - component: {fileID: 205589295927390086}
-  - component: {fileID: 6969854698311843903}
   m_Layer: 0
-  m_Name: Building_01
+  m_Name: Building_01 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49793,25 +49792,6 @@ LODGroup:
     - renderer: {fileID: 23275646524581768}
     - renderer: {fileID: 23973402177556926}
   m_Enabled: 1
---- !u!114 &6969854698311843903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557946291579184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431777085e75b1c4a95aad8d960095f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_destroyAfterSpawn: 1
-  m_unpackPrefab: 0
-  m_boundsModifier:
-    m_ignore: 0
-    m_shapeType: 1
-    m_center: {x: 0, y: 9.842488, z: 0}
-    m_size: {x: 18, y: 18, z: 20}
 --- !u!1 &1558020937454288
 GameObject:
   m_ObjectHideFlags: 0

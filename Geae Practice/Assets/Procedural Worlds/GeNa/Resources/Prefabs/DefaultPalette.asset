@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c477de684ee10c4082f9fddf19a75ce, type: 3}
   m_Name: DefaultPalette
   m_EditorClassIdentifier: 
-  m_paletteEntryIDCount: -2147483465
+  m_paletteEntryIDCount: -2147483455
   m_paletteEntries:
   - m_name: Pref_Barn1_A
     m_id: -2147483647
@@ -816,3 +816,46 @@ MonoBehaviour:
     m_id: -2147483465
     m_guid: 6e2aa137ededd6a4ca7eee02ab8246ff
     m_object: {fileID: 1341889616728956, guid: 6e2aa137ededd6a4ca7eee02ab8246ff, type: 3}
+  - m_name: Building_01
+    m_id: -2147483464
+    m_guid: 3d1a5f0a385fa014e93a2e31f080ac3c
+    m_object: {fileID: 1557946291579184, guid: 3d1a5f0a385fa014e93a2e31f080ac3c, type: 3}
+  - m_name: Building_01
+    m_id: -2147483463
+    m_guid: 3d1a5f0a385fa014e93a2e31f080ac3c
+    m_object: {fileID: 1557946291579184, guid: 3d1a5f0a385fa014e93a2e31f080ac3c, type: 3}
+  - m_name: Building_01
+    m_id: -2147483462
+    m_guid: 3d1a5f0a385fa014e93a2e31f080ac3c
+    m_object: {fileID: 1557946291579184, guid: 3d1a5f0a385fa014e93a2e31f080ac3c, type: 3}
+  - m_name: Building_01 1
+    m_id: -2147483461
+    m_guid: 47120bd492789e446883c4d5f959a89a
+    m_object: {fileID: 1557946291579184, guid: 47120bd492789e446883c4d5f959a89a, type: 3}
+  - m_name: Background house_1
+    m_id: -2147483460
+    m_guid: d17f53eb6a7f52f4fa422ac4066bc2fe
+    m_object: {fileID: 1528952283173222, guid: d17f53eb6a7f52f4fa422ac4066bc2fe, type: 3}
+  - m_name: Background house_2
+    m_id: -2147483459
+    m_guid: 6042c163e12f09c40ac45f0dbafc5ad8
+    m_object: {fileID: 1722304867686966, guid: 6042c163e12f09c40ac45f0dbafc5ad8, type: 3}
+  - m_name: Background house_2
+    m_id: -2147483458
+    m_guid: 6042c163e12f09c40ac45f0dbafc5ad8
+    m_object: {fileID: 1722304867686966, guid: 6042c163e12f09c40ac45f0dbafc5ad8, type: 3}
+  - m_name: Building
+    m_id: -2147483457
+    m_guid: 67e517f9660a1274185b942c73a999b5
+    m_object: {fileID: 143083819898888744, guid: 67e517f9660a1274185b942c73a999b5,
+      type: 3}
+  - m_name: Building
+    m_id: -2147483456
+    m_guid: 67e517f9660a1274185b942c73a999b5
+    m_object: {fileID: 143083819898888744, guid: 67e517f9660a1274185b942c73a999b5,
+      type: 3}
+  - m_name: Spawner - Background house_2
+    m_id: -2147483455
+    m_guid: 6ef67230183f98e4fbfd7eee56aef5ab
+    m_object: {fileID: 2886920473386551135, guid: 6ef67230183f98e4fbfd7eee56aef5ab,
+      type: 3}
