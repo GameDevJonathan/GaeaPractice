@@ -99,11 +99,11 @@ namespace ProceduralWorlds.Flora
 
         public static FLORARP GetRenderPipline()
         {
-            if (GraphicsSettings.renderPipelineAsset == null)
+            if (GraphicsSettings.defaultRenderPipeline == null)
             {
                 return FLORARP.Builtin;
             }
-            if (GraphicsSettings.renderPipelineAsset.GetType().ToString().Contains("HighDefinition"))
+            if (GraphicsSettings.defaultRenderPipeline.GetType().ToString().Contains("HighDefinition"))
             {
                 return FLORARP.HDRP;
             }

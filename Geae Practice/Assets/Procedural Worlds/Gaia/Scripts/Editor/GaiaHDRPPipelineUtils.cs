@@ -193,7 +193,7 @@ namespace Gaia.Pipeline.HDRP
                 }
             }
 
-            if ((GraphicsSettings.renderPipelineAsset == null && qualityLevelRenderPipelineAssetExists == false) || EditorUtility.DisplayDialog("Use Gaias Render Pipeline Asset configuration?", "HDRP requires a render pipeline asset to be set up in the Project Graphics / Quality Settings. It looks like you already have render pipeline assets in place in your project. You can either let Gaia adjust the render pipeline asset with preconfigured settings (Recommended) or keep the existing render pipeline asset configuration in place.", "Use Gaias Configuration", "Keep existing Configuration"))
+            if ((GraphicsSettings.defaultRenderPipeline == null && qualityLevelRenderPipelineAssetExists == false) || EditorUtility.DisplayDialog("Use Gaias Render Pipeline Asset configuration?", "HDRP requires a render pipeline asset to be set up in the Project Graphics / Quality Settings. It looks like you already have render pipeline assets in place in your project. You can either let Gaia adjust the render pipeline asset with preconfigured settings (Recommended) or keep the existing render pipeline asset configuration in place.", "Use Gaias Configuration", "Keep existing Configuration"))
             {
                 try
                 {
@@ -209,7 +209,7 @@ namespace Gaia.Pipeline.HDRP
                         //No mapping? This is most likely a new, untested unity version. Try latest entry in this case since this is most likely to work.
                         pipelineAssetName = profile.m_highDefinitionPipelineProfiles.Last().m_pipelineAssetName;
                     }
-                    GraphicsSettings.renderPipelineAsset = AssetDatabase.LoadAssetAtPath<RenderPipelineAsset>(GaiaUtils.GetAssetPath(pipelineAssetName + GaiaConstants.gaiaFileFormatAsset));
+                    GraphicsSettings.defaultRenderPipeline = AssetDatabase.LoadAssetAtPath<RenderPipelineAsset>(GaiaUtils.GetAssetPath(pipelineAssetName + GaiaConstants.gaiaFileFormatAsset));
 
                     int originalQualitySettingsLevel = QualitySettings.GetQualityLevel();
                     try
@@ -253,7 +253,7 @@ namespace Gaia.Pipeline.HDRP
         public static void UpdateHDRPPipelineSettings()
         {
 #if UPPipeline
-            RenderPipelineAsset pipelineAsset = GraphicsSettings.renderPipelineAsset;
+            RenderPipelineAsset pipelineAsset = GraphicsSettings.defaultRenderPipeline;
             if (pipelineAsset != null)
             {
                 QualitySettings.renderPipeline = pipelineAsset;

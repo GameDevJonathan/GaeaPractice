@@ -49,9 +49,9 @@ namespace ProceduralWorlds.HDRPTOD
         /// <returns></returns>
         private static bool IsHDRP()
         {
-            if (GraphicsSettings.renderPipelineAsset != null)
+            if (GraphicsSettings.defaultRenderPipeline != null)
             {
-                return GraphicsSettings.renderPipelineAsset.GetType().ToString().Contains("HDRenderPipelineAsset");
+                return GraphicsSettings.defaultRenderPipeline.GetType().ToString().Contains("HDRenderPipelineAsset");
             }
             return false;
         }

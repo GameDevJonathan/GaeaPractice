@@ -18,6 +18,7 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
         [HideInInspector][NoScaleOffset] unity_LightmapsInd("unity_LightmapsInd", 2DArray) = "" {}
         [HideInInspector][NoScaleOffset] unity_ShadowMasks("unity_ShadowMasks", 2DArray) = "" {}
 
+		[HideInInspector][ToggleUI] _AddPrecomputedVelocity("Add Precomputed Velocity", Float) = 1
 		[HideInInspector][ToggleOff] _ReceiveShadows("Receive Shadows", Float) = 1.0
 	}
 
@@ -69,26 +70,42 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				true:ShowPort:Forward:Alpha Clip Threshold Shadow
 				false,disable:RemoveDefine:_ALPHATEST_SHADOW_ON 1
 				false,disable:HidePort:Forward:Alpha Clip Threshold Shadow
+			Option:Motion Vectors:false,true:true
+				true:ShowOption:  Add Precomputed Velocity
+				false:HideOption:  Add Precomputed Velocity
+				true:IncludePass:MotionVectors
+				false:ExcludePass:MotionVectors
+				true:SetOption:Tessellation,0
+			Option:  Add Precomputed Velocity:false,true:false
+				true:SetShaderProperty:_AddPrecomputedVelocity,[HideInInspector][ToggleUI] _AddPrecomputedVelocity("Add Precomputed Velocity", Float) = 1
+				false:SetShaderProperty:_AddPrecomputedVelocity,//[HideInInspector][ToggleUI] _AddPrecomputedVelocity("Add Precomputed Velocity", Float) = 1
+				true:SetShaderProperty:_AddPrecomputedVelocity,1
+				true:SetDefine:MotionVectors:pragma shader_feature_local_vertex _ADD_PRECOMPUTED_VELOCITY
+				false:RemoveDefine:MotionVectors:pragma shader_feature_local_vertex _ADD_PRECOMPUTED_VELOCITY
 			Option:GPU Instancing:false,true:true
 				true:SetDefine:Forward:pragma multi_compile_instancing
 				true:SetDefine:ShadowCaster:pragma multi_compile_instancing
+				true:SetDefine:MotionVectors:pragma multi_compile_instancing
 				true:SetDefine:DepthOnly:pragma multi_compile_instancing
 				true:SetDefine:DepthNormals:pragma multi_compile_instancing
 				false:RemoveDefine:Forward:pragma multi_compile_instancing
 				false:RemoveDefine:ShadowCaster:pragma multi_compile_instancing
+				false:RemoveDefine:MotionVectors:pragma multi_compile_instancing
 				false:RemoveDefine:DepthOnly:pragma multi_compile_instancing
 				false:RemoveDefine:DepthNormals:pragma multi_compile_instancing
 				true:SetDefine:Forward:pragma instancing_options renderinglayer
 				false:RemoveDefine:Forward:pragma instancing_options renderinglayer
 			Option:LOD CrossFade:false,true:true
-				true:SetDefine:Forward:pragma multi_compile _ LOD_FADE_CROSSFADE
-				true:SetDefine:ShadowCaster:pragma multi_compile _ LOD_FADE_CROSSFADE
-				true:SetDefine:DepthOnly:pragma multi_compile _ LOD_FADE_CROSSFADE
-				true:SetDefine:DepthNormals:pragma multi_compile _ LOD_FADE_CROSSFADE
-				false:RemoveDefine:Forward:pragma multi_compile _ LOD_FADE_CROSSFADE
-				false:RemoveDefine:ShadowCaster:pragma multi_compile _ LOD_FADE_CROSSFADE
-				false:RemoveDefine:DepthOnly:pragma multi_compile _ LOD_FADE_CROSSFADE
-				false:RemoveDefine:DepthNormals:pragma multi_compile _ LOD_FADE_CROSSFADE
+				true:SetDefine:Forward:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				true:SetDefine:ShadowCaster:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				true:SetDefine:MotionVectors:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				true:SetDefine:DepthOnly:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				true:SetDefine:DepthNormals:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				false:RemoveDefine:Forward:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				false:RemoveDefine:ShadowCaster:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				false:RemoveDefine:MotionVectors:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				false:RemoveDefine:DepthOnly:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+				false:RemoveDefine:DepthNormals:pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
 			Option:Built-in Fog:false,true:true
 				true:SetDefine:Forward:pragma multi_compile_fog
 				false:RemoveDefine:Forward:pragma multi_compile_fog
@@ -97,10 +114,12 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			Option:DOTS Instancing:false,true:false
 				true:SetDefine:Forward:pragma multi_compile _ DOTS_INSTANCING_ON
 				true:SetDefine:ShadowCaster:pragma multi_compile _ DOTS_INSTANCING_ON
+				true:SetDefine:MotionVectors:pragma multi_compile _ DOTS_INSTANCING_ON
 				true:SetDefine:DepthOnly:pragma multi_compile _ DOTS_INSTANCING_ON
 				true:SetDefine:DepthNormals:pragma multi_compile _ DOTS_INSTANCING_ON
 				false:RemoveDefine:Forward:pragma multi_compile _ DOTS_INSTANCING_ON
 				false:RemoveDefine:ShadowCaster:pragma multi_compile _ DOTS_INSTANCING_ON
+				false:RemoveDefine:MotionVectors:pragma multi_compile _ DOTS_INSTANCING_ON
 				false:RemoveDefine:DepthOnly:pragma multi_compile _ DOTS_INSTANCING_ON
 				false:RemoveDefine:DepthNormals:pragma multi_compile _ DOTS_INSTANCING_ON
 			Option:Meta Pass:false,true:false
@@ -126,6 +145,7 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				false,disable:RemoveDefine:pragma domain DomainFunction
 				false,disable:HideOption:  Phong
 				false,disable:HideOption:  Type
+				true:SetOption:Motion Vectors,0
 			Option:  Phong:false,true:false
 				true:SetDefine:ASE_PHONG_TESSELLATION
 				false,disable:RemoveDefine:ASE_PHONG_TESSELLATION
@@ -198,7 +218,7 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 		/*ase_stencil*/
 
 		HLSLINCLUDE
-		#pragma target 3.5
+		#pragma target 4.5
 		#pragma prefer_hlslcc gles
 		#pragma exclude_renderers d3d9 // ensure rendering platforms toggle list is visible
 
@@ -333,6 +353,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/UnityInstancing.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
 
 			/*ase_pragma*/
 
@@ -537,7 +561,7 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				#endif
 
 				#ifdef LOD_FADE_CROSSFADE
-					LODDitheringTransition( IN.positionCS.xyz, unity_LODFade.x );
+					LODFadeCrossFade( IN.positionCS );
 				#endif
 
 				return half4( Color, Alpha );
@@ -566,7 +590,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			HLSLPROGRAM
 
 			#pragma shader_feature_local _RECEIVE_SHADOWS_OFF
+
+			#pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
 			#pragma multi_compile_fragment _ _DBUFFER_MRT1 _DBUFFER_MRT2 _DBUFFER_MRT3
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
 
 			#pragma multi_compile _ DIRLIGHTMAP_COMBINED
             #pragma multi_compile _ LIGHTMAP_ON
@@ -590,6 +617,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Debug/Debugging3D.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/SurfaceData.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
 
 			/*ase_pragma*/
 
@@ -760,7 +791,11 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			}
 			#endif
 
-			half4 frag ( VertexOutput IN /*ase_frag_input*/ ) : SV_Target
+			half4 frag ( VertexOutput IN
+				#ifdef _WRITE_RENDERING_LAYERS
+				, out float4 outRenderingLayers : SV_Target1
+				#endif
+				/*ase_frag_input*/ ) : SV_Target
 			{
 				UNITY_SETUP_INSTANCE_ID( IN );
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX( IN );
@@ -800,15 +835,21 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				#endif
 
 				#ifdef LOD_FADE_CROSSFADE
-					LODDitheringTransition( IN.positionCS.xyz, unity_LODFade.x );
+					LODFadeCrossFade( IN.positionCS );
 				#endif
 
 				#ifdef ASE_FOG
 					Color = MixFog( Color, IN.fogFactor );
 				#endif
 
+				#ifdef _WRITE_RENDERING_LAYERS
+					uint renderingLayers = GetMeshRenderingLayer();
+					outRenderingLayers = float4( EncodeMeshRenderingLayer( renderingLayers ), 0, 0, 0 );
+				#endif
+
 				return half4( Color, Alpha );
 			}
+
 			ENDHLSL
 		}
 
@@ -840,6 +881,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
 
 			/*ase_pragma*/
 
@@ -1055,7 +1100,7 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				#endif
 
 				#ifdef LOD_FADE_CROSSFADE
-					LODDitheringTransition( IN.positionCS.xyz, unity_LODFade.x );
+					LODFadeCrossFade( IN.positionCS );
 				#endif
 
 				return 0;
@@ -1086,6 +1131,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
 
 			/*ase_pragma*/
 
@@ -1276,7 +1325,7 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				#endif
 
 				#ifdef LOD_FADE_CROSSFADE
-					LODDitheringTransition( IN.positionCS.xyz, unity_LODFade.x );
+					LODFadeCrossFade( IN.positionCS );
 				#endif
 				return 0;
 			}
@@ -1580,10 +1629,6 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				Color *= Alpha;
 				#endif
 
-				#ifdef LOD_FADE_CROSSFADE
-					LODDitheringTransition( IN.positionCS.xyz, unity_LODFade.x );
-				#endif
-
 				#ifdef ASE_FOG
 					Color = MixFog( Color, IN.fogFactor );
 				#endif
@@ -1831,6 +1876,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
 
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
+
 			/*ase_pragma*/
 
 			struct VertexInput
@@ -2027,6 +2076,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#pragma vertex vert
 			#pragma fragment frag
 
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
+
+        	#pragma multi_compile_fragment _ _GBUFFER_NORMALS_OCT
+
 			#define ATTRIBUTES_NEED_NORMAL
 			#define ATTRIBUTES_NEED_TANGENT
 			#define VARYINGS_NEED_NORMAL_WS
@@ -2040,6 +2093,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+            #if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
 
 			/*ase_pragma*/
 
@@ -2196,7 +2253,12 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			}
 			#endif
 
-			half4 frag(VertexOutput IN /*ase_frag_input*/) : SV_TARGET
+			void frag( VertexOutput IN
+				, out half4 outNormalWS : SV_Target0
+			#ifdef _WRITE_RENDERING_LAYERS
+				, out float4 outRenderingLayers : SV_Target1
+			#endif
+				/*ase_frag_input*/ )
 			{
 				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
 
@@ -2210,12 +2272,24 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 				#endif
 
 				#ifdef LOD_FADE_CROSSFADE
-					LODDitheringTransition( IN.positionCS.xyz, unity_LODFade.x );
+					LODFadeCrossFade( IN.positionCS );
 				#endif
 
-				float3 normalWS = IN.normalWS;
+				#if defined(_GBUFFER_NORMALS_OCT)
+					float3 normalWS = normalize(IN.normalWS);
+					float2 octNormalWS = PackNormalOctQuadEncode(normalWS);           // values between [-1, +1], must use fp32 on some platforms
+					float2 remappedOctNormalWS = saturate(octNormalWS * 0.5 + 0.5);   // values between [ 0,  1]
+					half3 packedNormalWS = PackFloat2To888(remappedOctNormalWS);      // values between [ 0,  1]
+					outNormalWS = half4(packedNormalWS, 0.0);
+				#else
+					float3 normalWS = IN.normalWS;
+					outNormalWS = half4(NormalizeNormalPerPixel(normalWS), 0.0);
+				#endif
 
-				return half4(NormalizeNormalPerPixel(normalWS), 0.0);
+				#ifdef _WRITE_RENDERING_LAYERS
+					uint renderingLayers = GetMeshRenderingLayer();
+					outRenderingLayers = float4(EncodeMeshRenderingLayer(renderingLayers), 0, 0, 0);
+				#endif
 			}
 
 			ENDHLSL
@@ -2240,6 +2314,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#pragma vertex vert
 			#pragma fragment frag
 
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
+
+        	#pragma multi_compile_fragment _ _GBUFFER_NORMALS_OCT
+
 			#define ATTRIBUTES_NEED_NORMAL
 			#define ATTRIBUTES_NEED_TANGENT
 			#define ATTRIBUTES_NEED_TEXCOORD1
@@ -2255,6 +2333,10 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+            #if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
 
 			/*ase_pragma*/
 
@@ -2422,15 +2504,175 @@ Shader /*ase_name*/ "Hidden/Universal/Unlit" /*end*/
 					clip(surfaceDescription.Alpha - surfaceDescription.AlphaClipThreshold);
 				#endif
 
-				#ifdef LOD_FADE_CROSSFADE
-					LODDitheringTransition( IN.positionCS.xyz, unity_LODFade.x );
-				#endif
-
 				float3 normalWS = IN.normalWS;
 
 				return half4(NormalizeNormalPerPixel(normalWS), 0.0);
 			}
 
+			ENDHLSL
+		}
+
+		/*ase_pass*/
+		Pass
+		{
+			/*ase_hide_pass*/
+			Name "MotionVectors"
+			Tags
+			{
+				"LightMode" = "MotionVectors"
+			}
+
+			ColorMask RG
+
+			HLSLPROGRAM
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
+		    #include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
+			
+		    #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+		    #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+		    #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+		    #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+		    #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+		    #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+		    #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+		    #include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+			#endif
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/MotionVectorsCommon.hlsl"
+
+			/*ase_pragma*/
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 positionOld : TEXCOORD4;
+				#if _ADD_PRECOMPUTED_VELOCITY
+					float3 alembicMotionVector : TEXCOORD5;
+				#endif
+				/*ase_vdata:p=p;uv4=tc4;uv5=tc5*/
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				float4 positionCS : SV_POSITION;
+				float4 positionCSNoJitter : TEXCOORD0;
+				float4 previousPositionCSNoJitter : TEXCOORD1;
+				/*ase_interp(2,):sp=sp.xyzw*/
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			// Property used by ScenePickingPass
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			// Properties used by SceneSelectionPass
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			/*ase_globals*/
+
+			/*ase_funcs*/
+
+			VertexOutput VertexFunction( VertexInput v /*ase_vert_input*/ )
+			{
+				VertexOutput o = (VertexOutput)0;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+				/*ase_vert_code:v=VertexInput;o=VertexOutput*/
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = /*ase_vert_out:Vertex Offset;Float3;2;-1;_Vertex*/defaultVertexValue/*end*/;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+
+				VertexPositionInputs vertexInput = GetVertexPositionInputs( v.positionOS.xyz );
+
+				// Jittered. Match the frame.
+				o.positionCS = vertexInput.positionCS;
+				o.positionCSNoJitter = mul( _NonJitteredViewProjMatrix, mul( UNITY_MATRIX_M, v.positionOS ) );
+
+				float4 prevPos = ( unity_MotionVectorsParams.x == 1 ) ? float4( v.positionOld, 1 ) : v.positionOS;
+
+				#if _ADD_PRECOMPUTED_VELOCITY
+					prevPos = prevPos - float4(v.alembicMotionVector, 0);
+				#endif
+
+				o.previousPositionCSNoJitter = mul( _PrevViewProjMatrix, mul( UNITY_PREV_MATRIX_M, prevPos ) );
+
+				ApplyMotionVectorZBias( o.positionCS );
+				return o;
+			}
+
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+
+			half4 frag(	VertexOutput IN /*ase_frag_input*/ ) : SV_Target
+			{
+				UNITY_SETUP_INSTANCE_ID(IN);
+				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX( IN );
+
+				/*ase_frag_code:IN=VertexOutput*/
+
+				float Alpha = /*ase_frag_out:Alpha;Float;0;-1;_Alpha*/1/*end*/;
+				float AlphaClipThreshold = /*ase_frag_out:Alpha Clip Threshold;Float;1;-1;_AlphaClip*/0.5/*end*/;
+
+				#ifdef _ALPHATEST_ON
+					clip(Alpha - AlphaClipThreshold);
+				#endif
+
+				#ifdef LOD_FADE_CROSSFADE
+					LODFadeCrossFade( IN.positionCS );
+				#endif
+
+				return float4( CalcNdcMotionVectorFromCsPositions( IN.positionCSNoJitter, IN.previousPositionCSNoJitter ), 0, 0 );
+			}
 			ENDHLSL
 		}
 		/*ase_pass_end*/

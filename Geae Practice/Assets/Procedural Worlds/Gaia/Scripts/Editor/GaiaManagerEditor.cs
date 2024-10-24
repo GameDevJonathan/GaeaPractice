@@ -346,16 +346,16 @@ namespace Gaia
             m_gaiaPipelineSettings = m_settings.m_pipelineProfile;
 
             //Sets up the render to the correct pipeline
-            if (GraphicsSettings.renderPipelineAsset == null)
+            if (GraphicsSettings.defaultRenderPipeline == null)
             {
                 m_settings.m_currentRenderer = GaiaConstants.EnvironmentRenderer.BuiltIn;
                 m_settings.m_pipelineProfile.m_activePipelineInstalled = GaiaConstants.EnvironmentRenderer.BuiltIn;
             }
-            else if (GraphicsSettings.renderPipelineAsset.GetType().ToString().Contains("HDRenderPipelineAsset"))
+            else if (GraphicsSettings.defaultRenderPipeline.GetType().ToString().Contains("HDRenderPipelineAsset"))
             {
                 m_settings.m_currentRenderer = GaiaConstants.EnvironmentRenderer.HighDefinition;
             }
-            else if (GraphicsSettings.renderPipelineAsset.GetType().ToString().Contains("UniversalRenderPipelineAsset"))
+            else if (GraphicsSettings.defaultRenderPipeline.GetType().ToString().Contains("UniversalRenderPipelineAsset"))
             {
                 m_settings.m_currentRenderer = GaiaConstants.EnvironmentRenderer.Universal;
             }
@@ -6269,13 +6269,13 @@ namespace Gaia
             EditorGUILayout.LabelField("Product Name: " + Application.productName);
             EditorGUILayout.LabelField("Project Version: " + Application.version);
             EditorGUILayout.LabelField("Project Data Path: " + Application.dataPath);
-            if (GraphicsSettings.renderPipelineAsset == null)
+            if (GraphicsSettings.defaultRenderPipeline == null)
             {
                 EditorGUILayout.LabelField("Render Pipeline: Builtin");
             }
             else
             {
-                Type rpType = GraphicsSettings.renderPipelineAsset.GetType();
+                Type rpType = GraphicsSettings.defaultRenderPipeline.GetType();
                 if (rpType.FullName.Contains("HighDefinition"))
                 {
                     EditorGUILayout.LabelField("Render Pipeline: High Definition");
@@ -6300,13 +6300,13 @@ namespace Gaia
                 clipStringBuilder.AppendLine("Product Name: " + Application.productName);
                 clipStringBuilder.AppendLine("Project Version: " + Application.version);
                 clipStringBuilder.AppendLine("Project Data Path: " + Application.dataPath);
-                if (GraphicsSettings.renderPipelineAsset == null)
+                if (GraphicsSettings.defaultRenderPipeline == null)
                 {
                     clipStringBuilder.AppendLine("Render Pipeline: Builtin");
                 }
                 else
                 {
-                    Type rpType = GraphicsSettings.renderPipelineAsset.GetType();
+                    Type rpType = GraphicsSettings.defaultRenderPipeline.GetType();
                     if (rpType.FullName.Contains("HighDefinition"))
                     {
                         clipStringBuilder.AppendLine("Render Pipeline: High Definition");

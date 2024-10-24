@@ -1725,11 +1725,11 @@ namespace ProceduralWorlds.Flora
         /// <returns></returns>
         public static FloraTerrainTile.FLORARP GetActivePipeline()
         {
-            if (GraphicsSettings.renderPipelineAsset == null)
+            if (GraphicsSettings.defaultRenderPipeline == null)
             {
                 return FloraTerrainTile.FLORARP.Builtin;
             }
-            else if (GraphicsSettings.renderPipelineAsset.GetType().ToString().Contains("HDRenderPipelineAsset"))
+            else if (GraphicsSettings.defaultRenderPipeline.GetType().ToString().Contains("HDRenderPipelineAsset"))
             {
                 return FloraTerrainTile.FLORARP.HDRP;
             }

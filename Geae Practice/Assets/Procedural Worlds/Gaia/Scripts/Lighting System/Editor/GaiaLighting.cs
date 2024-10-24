@@ -973,7 +973,7 @@ namespace Gaia
 
 #if UPPipeline
 
-            GaiaURPRuntimeUtils.SetShadowDistance(GraphicsSettings.renderPipelineAsset as UniversalRenderPipelineAsset, profile);
+            GaiaURPRuntimeUtils.SetShadowDistance(GraphicsSettings.defaultRenderPipeline as UniversalRenderPipelineAsset, profile);
 
 #endif
         }
